@@ -1,0 +1,45 @@
+.mt5 {
+    margin-top: 3rem !important
+}
+
+.btn {
+	padding: 10px 18px;
+	text-transform: uppercase;
+	color: #fff;
+	border: 0;
+	border-radius: 0;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 1px;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+
+.btn.btnprimary {
+	background-color: #242424;
+}
+
+.col10, .colxl8 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px
+}
+
+
+.col10 {
+  -ms-flex: 0 0 83.333333%;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+
+.colxl8 {
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%
+}
+
+.textcenter {
+  text-align: center !important
+}
