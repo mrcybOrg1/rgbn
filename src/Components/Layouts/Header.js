@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import IMAGES from '@/../public/index'
 import { motion, useScroll, useMotionValueEvent } from "framer-motion"
-import MobileMenu from '../Ui/MobileMenu'
+import $ from 'jquery';
+
+
 
 
 const Header = () => {
@@ -20,11 +22,37 @@ const Header = () => {
     }
   });
 
+ 
+  useEffect(() => {
+    $('.menu > ul > li:has( > ul)').addClass('menu-dropdown-icon');
+    $('.menu > ul > li > ul:not(:has(ul))').addClass('normal-sub');
+    $(".menu > ul").before("<a href=\"#\" class=\"menu-mobile\"></a>");
+
+    $(".menu > ul > li").hover(function (e) {
+      if ($(window).width() > 1170) {
+        $(this).children("ul").stop(true, false).fadeToggle(300);
+        e.preventDefault();
+      }
+    });
+
+    $(".menu > ul > li").on('click', function () {
+      if ($(window).width() <= 1170) {
+        $(this).children("ul").fadeToggle(300);
+      }
+    });
+
+    $(".menu-mobile").on('click', function (e) {
+      $(".menu > ul").toggleClass('show-on-mobile');
+      e.preventDefault();
+    });
+  }, []);
+
+
 
   return (
     <>
 	<motion.nav id="menu-wrap" classNameName="menu-back cbp-af-header"
-  style={{ backgroundColor: "#181c1b61" }}
+  style={{ backgroundColor: "#000000" }}
   variants={{
     visible: { y: 0 },
     hidden: { y: "-100%" },
@@ -32,21 +60,21 @@ const Header = () => {
   animate={hidden ? "hidden" : "visible"}
   transition={{ duration: 0.35, ease: "easeInOut"}}
   >
-		<div className="menu">
+    <div className="menu">
 			<a href="/" >
-				<div className="logo">
-          <motion.h1 animate={{
-      scale: [1, 2, 2, .5, 1],
-      rotate: [0, 0, 360],
-      borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}
-      transition={{delay:1, duration:1.5}}
-      whileHover={{
-        scale: [1, 2, 2, .5, 1],
-        rotate: [0, 360, 0]
-      }}>
-      logo</motion.h1>
-					{/* <img src={IMAGES.logo} alt=""/> */}
-				</div>
+				<motion.div className="logo"
+        animate={{
+          scale: [1, 2, 2, .5, 1],
+          rotate: [0, 0, 360],
+          borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}
+          transition={{delay:1, duration:1.5}}
+          whileHover={{
+            scale: [1, 2, 2, .5, 1],
+            rotate: [0, 360, 0]
+          }}
+        >
+					<img src={IMAGES.logo} alt=""/>
+				</motion.div>
 			</a>
 			<ul>
         <motion.li 
@@ -76,17 +104,15 @@ const Header = () => {
 				</motion.li>
 			</ul>
 		</div>
-  {/* <MobileMenu /> */}
+
+      <div id="mobile">
+        
+        <div className="menue-mobile">
+          <div ></div>
+        </div>       
+        </div>  
+
 	</motion.nav>
-
-
-      {/* Button to toggle mobile menu */}
-      {/* <div className="mobile-menu-toggle" onClick={() => setHidden(!hidden)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-       </div> */}
-
     </>
   )
 }

@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 
 /* #Primary
@@ -525,9 +525,9 @@ span.call-top:hover{
 
 .logo{
 	position:absolute;
-	height: 64px;
+	height: 100px;
 	z-index:10000;
-	top: 18px;
+	top: 5px;
 	-webkit-transition : all 0.3s ease-out;
 	-moz-transition : all 0.3s ease-out;
 	-o-transition :all 0.3s ease-out;

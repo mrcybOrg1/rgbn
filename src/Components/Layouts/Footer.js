@@ -17,8 +17,19 @@ const footer = () => {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-3 text-center text-md-left">
-					<h1>logo</h1>
-					{/* <img src={IMAGES.logo} alt=""/> */}
+					<motion.div
+					animate={{
+						scale: [1, 2, 2, .5, 1],
+						rotate: [0, 0, 360],
+						borderRadius: ["20%", "20%", "50%", "50%", "20%"],}}
+						transition={{delay:1, duration:1.5}}
+						whileHover={{
+						  scale: [1, 2, 2, .5, 1],
+						  rotate: [0, 360, 0]
+						}}
+					>
+					<img src={IMAGES.logo} alt=""/>
+					</motion.div>
 					<p className="color-grey mt-4">2234, Near Mahila Urban Bank,<br/>Opp.to sant Muktabai Mandir,<br/>Datt Ghat,Pandharpur, Maharashtra 413304</p>
 				</div>
 				<div className="col-md-4 text-center text-md-left">

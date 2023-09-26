@@ -10,7 +10,7 @@ const LuxuryOurRooms = () => {
     <motion.div className="section padding-top-bottom over-hide background-grey"
 	initial= {{opacity:0, scale: 0}}
 	whileInView={{opacity: 1, scale: 1}}
-	transition={{duration: 0.6}}
+	transition={{duration: 0.2}}
 	>
 		<div className="container">
 			<div className="row justify-content-center">

@@ -1,5 +1,5 @@
 const IMAGES = {
-    logo : 'src/img/logo.png',
+    logo : 'src/img/logos/logo4.png',
     logo1 : 'src/img/logos/1.png',
     logo2 : 'src/img/logos/2.png',
     logo3 : 'src/img/logos/3.png',

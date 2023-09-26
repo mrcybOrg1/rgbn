@@ -1,11 +1,12 @@
+"use client"
 import '@/../public/src/Style/globals.css'
 import '@/../public/src/Style/color.css'
 import '@/../public/src/Style/ionicons.min.css'
 import '@/../public/src/Style/font-awesome.min.css'
-import 'bootstrap/dist/css/bootstrap.css'
+import '@/../public/src/Style/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.css'
 import Header from '@/Components/Layouts/Header'
 import Footer from '@/Components/Layouts/Footer'
-
 
 
 
