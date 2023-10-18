@@ -52,13 +52,12 @@ const footer = () => {
 		<div className="container">
 			<div className="row">
 				<div className="col-md-6 text-center text-md-left mb-2 mb-md-0">
-					<p>2023 © Krafitech All rights reserved.</p>
-					<p>Build with ❤️ from Krafitech</p>
+					<p>2023 © RGBN All rights reserved.</p>
+					<p>Build with ❤️ from <a href="http://krafitechsolution.com/" target="_blank">Krafitech</a></p>
 				</div>
 				<div className="col-md-6 text-center text-md-right">
-					<a href="#" className="social-footer-bottom">facebook</a>
-					<a href="#" className="social-footer-bottom">twitter</a>
-					<a href="#" className="social-footer-bottom">instagram</a>
+					<a href="https://www.facebook.com/profile.php?id=61551011633359" className="social-footer-bottom">facebook</a>
+					<a href="https://www.instagram.com/radhagovindbhakti/" className="social-footer-bottom">instagram</a>
 				</div>
 			</div>	
 		</div>		
